@@ -58,21 +58,6 @@ This project focuses entirely on **UI engineering**, not business logic.
 
 ---
 
-## 📁 Project Structure
-youtube-clone/
-│
-├── index.html # Main HTML entry
-├── styles/
-│ └── style.css # Global & component styles
-├── images/
-│ ├── icons/ # UI icons
-│ ├── channel/ # Channel images
-│ └── thumbnail/ # Video thumbnails
-└── README.md
-
-
----
-
 ## 📐 UI & Responsive Strategy
 
 - **Grid-based system** for scalable video layout
