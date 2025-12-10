@@ -7,15 +7,16 @@
   Global Style
 ----------------*/
 * {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(248, 248, 248);
   padding-top: 80px;
-  padding-left: 80px;
+  padding-left: 100px;
   padding-right: 20px;
   padding-bottom: 20px;
 }
@@ -33,11 +34,10 @@ body {
   left: 0;
   right: 0;
   background-color: white;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(228, 228, 228);
+  border: 1px solid rgb(235, 235, 235);
   z-index: 100;
 }
+
 /*---------------
   Left Section 
 ----------------*/
@@ -47,9 +47,9 @@ body {
 }
 .hamburger-menu {
   height: 24px;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin: 0 24px;
 }
+
 .youtube-logo {
   height: 20px;
 }
@@ -83,9 +83,7 @@ body {
   height: 34px;
   width: 60px;
   background-color: rgb(240, 240, 240);
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(192, 192, 192);
+  border: 1px solid rgb(192, 192, 192);
   margin-left: -1px;
   margin-right: 10px;
 }
@@ -119,20 +117,14 @@ body {
   flex-shrink: 0;
 }
 
-.upload-icon {
-  height: 24px;
-}
-
-.apps-icon {
+.upload-icon,
+.apps-icon,
+.notifications-icon {
   height: 24px;
 }
 
 .notifications-icon-container {
   position: relative;
-}
-
-.notifications-icon {
-  height: 24px;
 }
 
 .notifications-count {
@@ -143,10 +135,7 @@ body {
   color: white;
   font-family: Roboto;
   font-size: 11px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding: 2px 5px;
   border-radius: 10px;
 }
 .profile-icon {
@@ -163,10 +152,9 @@ body {
   bottom: 0;
   top: 55px;
   background-color: white;
-  width: 72px;
-  z-index: 200;
+  width: 78px;
   padding-top: 5px;
-  border-right: 1px solid rgb(228, 228, 228);
+  z-index: 200;
 }
 
 .sidebar-link {
@@ -210,7 +198,7 @@ body {
   width: 100%;
 }
 
-.video-time{
+.video-time {
   background-color: black;
   color: white;
   position: absolute;
@@ -249,4 +237,38 @@ body {
 
 .video-author {
   margin-bottom: 4px;
+}
+
+
+/*----------------
+  Media Queries
+-----------------*/
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .channel-picture {
+    display: none;
+  }
+  .video-info-grid {
+   display: block;
+  }
+  .video-info {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
